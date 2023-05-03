@@ -1,1 +1,0 @@
-# climbingiitk.github.io
