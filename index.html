@@ -74,16 +74,57 @@
   background: #bb0000;
   color: white;
 }
+
 table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
+    /* width: 100%; */
+    font-size: 12pt;
+    border: 1px solid white;
+    border-collapse: collapse;
+    overflow-x: auto;
 }
+
 th, td {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 10px;
   padding-right: 10px;
   background-color: #D3D3D3;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  th, td {
+    font-size: 10pt;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  th {
+    text-align: center;
+  }
+  .single-blog-img iframe{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  th, td {
+    /* display: block; */
+    font-size: 8pt;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  th {
+    text-align: center;
+  }
+  .single-blog-img iframe{
+    width: 100%;
+  }
 }
 </style>
 <body>
@@ -105,10 +146,11 @@ th, td {
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+		      <li><a class="nav-link scrollto" href="#services">Join Us</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-		  <li><a class="nav-link scrollto" href="#services">Join Us</a></li>
-		  <li><a class="nav-link scrollto" href="#testimonials">Group</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Group</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="core_team.html">Core committee</a></li>
           <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="comp2023.html">COMP</a></li>
@@ -177,9 +219,6 @@ th, td {
   </section><!-- End Hero Section -->
 
   <main id="main">
-
-
-
 
 <!-- ======= Services Section ======= -->
   <div id="services" class="services-area area-padding">
@@ -641,11 +680,6 @@ th, td {
       </div>
     </div><!-- End Testimonials Section -->
 	
-
-   
-
-    
-
     <!-- ======= Contact Section ======= -->
     <div id="contact" class="contact-area">
       <div class="contact-inner area-padding">
@@ -687,9 +721,9 @@ th, td {
             <div class="col-md-4">
               <div class="contact-icon text-center">
                 <div class="single-icon">
-                  <i class="bi bi-geo-alt"></i>
+                  <a href="https://maps.app.goo.gl/YW1vf6XYqcoYsCJ46" target="_blank"><i class="bi bi-geo-alt"></i></a>
                   <p>
-                    Open Air Theatre (OAT)<br>
+                      Near Open Air Theatre (OAT)<br>
                     <span>New Sport Complex</span> </br>
 					 <span>IIT Kanpur, India</span>
                   </p>
@@ -725,10 +759,10 @@ th, td {
                 <div class="footer-icons">
                   <ul>
                      <li>
-                      <a href="https://www.instagram.com/climbing.iitk/?utm_source=ig_web_button_share_sheet&igshid=MmVlMjlkMTBhMg=="><i class="bi bi-instagram"></i></a>
+                      <a href="https://www.instagram.com/climbing.iitk/?utm_source=ig_web_button_share_sheet&igshid=MmVlMjlkMTBhMg==" target="_blank"><i class="bi bi-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="https://www.youtube.com/channel/UCjLB0oegoHIninZ1F_fVsJg"><i class="bi bi-youtube"></i></a>
+                      <a href="https://www.youtube.com/channel/UCjLB0oegoHIninZ1F_fVsJg" alt="location link" target="_blank"><i class="bi bi-youtube"></i></a>
                     </li>
                   </ul>
                 </div>
