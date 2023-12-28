@@ -12,7 +12,9 @@ html,
 body {
   height: 100%;
 }
-
+.center-container {
+  text-align: center;
+}
 .floatleft {
   float: left;
 }
