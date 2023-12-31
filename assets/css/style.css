@@ -446,7 +446,7 @@ div#preloader {
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1190px) {
   .mobile-nav-toggle {
     display: block;
   }

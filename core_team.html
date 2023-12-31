@@ -86,11 +86,27 @@ table {
     border-collapse: collapse;
     overflow-x: auto;
     
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     background-color: #D3D3D3;
+}
+
+@media (max-width: 1000px){
+  table {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 2px;
+    font-size: 10pt;
+  }
+}
+@media (max-width: 500px){
+  table {
+    margin: 1%;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 2px;
+    font-size: 8pt
+  }
 }
 
 </style>
