@@ -246,6 +246,48 @@ div#preloader {
 }
 
 /*--------------------------------------------------------------
+# Pop_Up for comp'25
+--------------------------------------------------------------*/
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.hidden {
+  display: none;
+}
+
+/* Poster */
+.poster {
+  max-width: 400px;
+  width: 80vw;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.poster img{
+  width: 80vw;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  color: white;
+  top: -30px;
+  right: -32px;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
