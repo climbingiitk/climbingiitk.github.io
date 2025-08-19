@@ -10,19 +10,23 @@
   /**
      * pop up 
      */
+document.addEventListener("DOMContentLoaded", () => {
   const posterBackdrop = document.getElementById("posterBackdrop");
   const closeBtn = document.getElementById("closePosterBtn");
 
-  // Show poster on page load
+  if (!posterBackdrop || !closeBtn) {
+    console.error("Poster elements not found in DOM!");
+    return;
+  }
+
   window.addEventListener("load", () => {
     posterBackdrop.classList.remove("hidden");
-    document.body.style.overflow = "hidden"; // prevent scroll
+    document.body.style.overflow = "hidden";
   });
 
-  // Close poster
   function closePoster() {
     posterBackdrop.classList.add("hidden");
-    document.body.style.overflow = ""; // restore scroll
+    document.body.style.overflow = "";
   }
 
   closeBtn.addEventListener("click", closePoster);
@@ -32,6 +36,7 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closePoster();
   });
+});
 
 
   /**
