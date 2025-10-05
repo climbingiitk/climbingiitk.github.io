@@ -7,36 +7,36 @@
 (function () {
   "use strict";
 
-  /**
-     * pop up 
-     */
-document.addEventListener("DOMContentLoaded", () => {
-  const posterBackdrop = document.getElementById("posterBackdrop");
-  const closeBtn = document.getElementById("closePosterBtn");
+//   /**
+//      * pop up 
+//      */
+// document.addEventListener("DOMContentLoaded", () => {
+//   const posterBackdrop = document.getElementById("posterBackdrop");
+//   const closeBtn = document.getElementById("closePosterBtn");
 
-  if (!posterBackdrop || !closeBtn) {
-    console.error("Poster elements not found in DOM!");
-    return;
-  }
+//   if (!posterBackdrop || !closeBtn) {
+//     console.error("Poster elements not found in DOM!");
+//     return;
+//   }
 
-  window.addEventListener("load", () => {
-    posterBackdrop.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
-  });
+//   window.addEventListener("load", () => {
+//     posterBackdrop.classList.remove("hidden");
+//     document.body.style.overflow = "hidden";
+//   });
 
-  function closePoster() {
-    posterBackdrop.classList.add("hidden");
-    document.body.style.overflow = "";
-  }
+//   function closePoster() {
+//     posterBackdrop.classList.add("hidden");
+//     document.body.style.overflow = "";
+//   }
 
-  closeBtn.addEventListener("click", closePoster);
-  posterBackdrop.addEventListener("click", (e) => {
-    if (e.target === posterBackdrop) closePoster();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closePoster();
-  });
-});
+//   closeBtn.addEventListener("click", closePoster);
+//   posterBackdrop.addEventListener("click", (e) => {
+//     if (e.target === posterBackdrop) closePoster();
+//   });
+//   document.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape") closePoster();
+//   });
+// });
 
 
   /**
