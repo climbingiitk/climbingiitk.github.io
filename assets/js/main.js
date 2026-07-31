@@ -10,34 +10,44 @@
   /**
      * pop up 
      */
-document.addEventListener("DOMContentLoaded", () => {
-  const posterBackdrop = document.getElementById("posterBackdrop");
-  const closeBtn = document.getElementById("closePosterBtn");
+  document.addEventListener("DOMContentLoaded", () => {
+    const posterBackdrop = document.getElementById("posterBackdrop");
+    const closeBtn = document.getElementById("closePosterBtn");
+    const openPosterLinks = document.querySelectorAll(".openPoster");
 
-  if (!posterBackdrop || !closeBtn) {
-    console.error("Poster elements not found in DOM!");
-    return;
-  }
+    if (!posterBackdrop || !closeBtn) return;
 
-  window.addEventListener("load", () => {
-    posterBackdrop.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
+    // Show popup on page load
+    window.addEventListener("load", () => {
+      posterBackdrop.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    });
+
+    // Open popup on click
+    openPosterLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        posterBackdrop.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    // Close popup
+    function closePoster() {
+      posterBackdrop.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closePoster);
+
+    posterBackdrop.addEventListener("click", (e) => {
+      if (e.target === posterBackdrop) closePoster();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closePoster();
+    });
   });
-
-  function closePoster() {
-    posterBackdrop.classList.add("hidden");
-    document.body.style.overflow = "";
-  }
-
-  closeBtn.addEventListener("click", closePoster);
-  posterBackdrop.addEventListener("click", (e) => {
-    if (e.target === posterBackdrop) closePoster();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closePoster();
-  });
-});
-
 
   /**
    * Easy selector helper function
