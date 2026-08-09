@@ -10,44 +10,44 @@
   /**
      * pop up 
      */
-  document.addEventListener("DOMContentLoaded", () => {
-    const posterBackdrop = document.getElementById("posterBackdrop");
-    const closeBtn = document.getElementById("closePosterBtn");
-    const openPosterLinks = document.querySelectorAll(".openPoster");
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const posterBackdrop = document.getElementById("posterBackdrop");
+  //   const closeBtn = document.getElementById("closePosterBtn");
+  //   const openPosterLinks = document.querySelectorAll(".openPoster");
 
-    if (!posterBackdrop || !closeBtn) return;
+  //   if (!posterBackdrop || !closeBtn) return;
 
-    // Show popup on page load
-    window.addEventListener("load", () => {
-      posterBackdrop.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-    });
+  //   // Show popup on page load
+  //   window.addEventListener("load", () => {
+  //     posterBackdrop.classList.remove("hidden");
+  //     document.body.style.overflow = "hidden";
+  //   });
 
-    // Open popup on click
-    openPosterLinks.forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        posterBackdrop.classList.remove("hidden");
-        document.body.style.overflow = "hidden";
-      });
-    });
+  //   // Open popup on click
+  //   openPosterLinks.forEach(link => {
+  //     link.addEventListener("click", (e) => {
+  //       e.preventDefault();
+  //       posterBackdrop.classList.remove("hidden");
+  //       document.body.style.overflow = "hidden";
+  //     });
+  //   });
 
-    // Close popup
-    function closePoster() {
-      posterBackdrop.classList.add("hidden");
-      document.body.style.overflow = "";
-    }
+  //   // Close popup
+  //   function closePoster() {
+  //     posterBackdrop.classList.add("hidden");
+  //     document.body.style.overflow = "";
+  //   }
 
-    closeBtn.addEventListener("click", closePoster);
+  //   closeBtn.addEventListener("click", closePoster);
 
-    posterBackdrop.addEventListener("click", (e) => {
-      if (e.target === posterBackdrop) closePoster();
-    });
+  //   posterBackdrop.addEventListener("click", (e) => {
+  //     if (e.target === posterBackdrop) closePoster();
+  //   });
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closePoster();
-    });
-  });
+  //   document.addEventListener("keydown", (e) => {
+  //     if (e.key === "Escape") closePoster();
+  //   });
+  // });
 
   /**
    * Easy selector helper function
